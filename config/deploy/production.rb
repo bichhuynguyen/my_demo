@@ -8,7 +8,8 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
-
+user = "huynguyen"
+ip_address = "127.0.0.13"
 # role-based syntax
 # ==================
 
@@ -17,9 +18,9 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-# role :app, %w{deploy@example.com}, my_property: :my_value
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
+role :app, ["#{user}@#{ip_address}"]
+role :web, ["#{user}@#{ip_address}"]
+role :db,  ["#{user}@#{ip_address}"]
 
 
 
@@ -49,13 +50,17 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server 'example.com',
-#   user: 'user_name',
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: 'user_name', # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: 'please use keys'
-#   }
+server ip_address,
+  user: user,
+  roles: %w{web app},
+  my_property: :my_value
+
+set :rails_env, 'production'
+
+set :bundle_flags, "--no-deployment"
+
+set :ssh_options, {
+  keys: %w(~/.ssh/server-vm),
+  forward_agent: true,
+  port: 2222
+}

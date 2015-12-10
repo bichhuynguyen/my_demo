@@ -52,8 +52,6 @@ gem 'whenever', '~> 0.9.4', :require => false
 
 gem 'google_books', '~> 0.2.2'
 
-require 'google_books'
-
 gem 'gdata', git: 'https://github.com/agentrock/gdata.git'
 
 gem 'sidekiq', '~> 4.0', '>= 4.0.1'
