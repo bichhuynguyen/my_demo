@@ -1,0 +1,67 @@
+
+@import "../bases/variables";
+.navbar {
+  height: 89px;
+}
+
+.navbar-header {
+  margin: 20px 0 0 15px;
+}
+/* styles for logo */
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+.logo {
+  font-family: 'Slabo 27px', serif;
+  font-size: 70px;
+  margin-left: 30px;
+}
+/* styles for search-group */
+.search-group {
+  margin-top: 25px;  
+  color: $light-green;
+  .search-btn {
+    color: $light-green;
+    &:hover,
+    &:focus {
+      color: white;
+      background: #00CCA3;
+    }
+  }
+}
+
+.main-nav,
+.main-nav .btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.main-nav {
+  margin-top: 17px;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: white;
+}
+
+.slide {
+  padding: 0;
+  .carousel-inner .item .carousel-img {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.blank-space {
+  background: $light-green;
+  height: 89px;
+}
+
+.dropdown-menu li input[type="checkbox"] {
+  display: none;
+  line-height: normal;
+}
+
+.username {
+  text-transform: capitalize;
+}

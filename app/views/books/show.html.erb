@@ -1,0 +1,51 @@
+<% provide(:title, @book.title) %>
+<div class="container main-content book-info">  <!-- main-content -->
+  <h1 class="book-title-lg"><%= @book.title %></h1>
+  <div class="row">
+    <div class="col-md-3 book-cover-photo"> <!-- book's cover nad rating -->
+      <figure>
+        <%= image_tag @book.covers, class: "large-cover" %>
+      </figure>     
+    </div>    <!-- end book's cover and rating' -->
+    <div class="col-md-6 main-description">    <!-- main-description -->
+      <section class="content-book-description">    <!-- content-book-description -->
+        <h4 class="book-detail-title"><em>Book Description</em></h4>
+        <%= raw(@book.description) %>
+      </section>    <!-- end content-book-description -->
+      <section class="books-introduction">    <!-- book-introduction -->
+        <h4 class="book-detail-title"><em>Book Details</em></h4>
+        <div class="book-intro-details">
+          <div class="b-details-label">
+            <p>Publisher:</p>
+            <p>Author:</p>
+            <p>ISBN:</p>
+            <p>Pages:</p>
+            <p>Published Date:</p>
+            <p>Google average rating:</p>
+           <!--  <p>File size:</p> -->
+            <!-- <p>Language:</p> -->
+          </div>
+          <div class="b-details-info">
+            <p class="book-publisher"><%= @book.publisher %></p>
+            <p class="book-author"><%= @book.authors %></p> 
+            <p><%= @book.isbn %></p>
+            <p><%= @book.page_count %></p>
+            <p><%= @book.year %></p>
+            <p><%= @book.average_rating %></p>
+          </div>
+        </div>
+      </section>    <!-- end book-introduction -->  
+      <div class="content-ebook-links">   <!-- ebook-links -->
+        <section>
+          <h4 class="book-detail-title"><em>Info Link</em></h4>
+            <%= link_to "Info link here", @book.info_link, class: "ebook-link", target: "_blank" %>
+        </section>
+        <section>
+          <h4 class="book-detail-title"><em>Preview Link</em></h4>
+            <%= link_to "Preview link here", @book.preview_link, class: "ebook-link", target: "_blank" %>
+        </section>
+        
+      </div>    <!-- end content-ebook-links -->
+    </div>    <!-- end main-description -->
+  </div>
+</div>      <!-- end main-content -->

@@ -1,0 +1,18 @@
+@import "variables";
+.border-box {
+  border: solid 1px #ccc;
+  border-radius: 10px;
+}
+
+.font-text {
+  font-size: 16px;
+  color: $dark-blue;
+}
+
+.margin-neg {
+  margin-left: -40px;
+}
+
+.margin-pos {
+  margin-left: 30px;
+}

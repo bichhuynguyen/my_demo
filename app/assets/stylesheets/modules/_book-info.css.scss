@@ -1,0 +1,93 @@
+
+@import "../bases/variables";
+.book-detail-title {
+  color: $dark-blue;
+  margin: 25px 0 20px;
+}
+
+/* main-description, contains book information details */
+.main-description {
+  margin-top: 12px;
+  .note,
+  .book-publisher,
+  .book-author {
+    color: blue;
+  }
+  .detail-description-text {
+    text-indent: 35px;
+  }
+  .book-intro-details {
+    width: 100%;
+    line-height: 25px;
+    .b-details-label {
+      width: 170px;
+      float: left;
+    }
+    .b-details-info,
+    .b-details-label {
+      p {
+        display: block;
+        height: 25px;
+      }
+    }
+    .b-details-info {
+      font-weight: bold;
+    }
+  }
+}
+
+.content-ebook-links {
+  clear: both;
+  .ebook-link {
+    font-style: italic;
+    &:hover,
+    &:focus {
+      color: red;
+      text-decoration: none;
+    }
+    &:active {
+      color: $light-green;
+    }
+  }
+}
+
+.book {
+  /* off by default */
+  .unfavorite { 
+    display: none; 
+  }
+}
+
+/* when the post is favorited show the unfavorite button instead */
+.book.favorited {
+  .favorite { 
+    display: none; 
+  }
+  .unfavorite { 
+    display: inline-block;
+  }
+}
+
+.fa-star-o {
+  font-size: 14px;
+  color: $dark-blue;
+}
+
+.comment-box {
+  margin: 45px 0 0 60px;
+  .comment-submit {
+    margin-right: 10px;
+  }
+  .comment-header {
+    color: $dark-blue;
+  }
+}
+
+.comment_body {
+  color: $dark-blue;
+  font-size: 15px;
+}
+
+.rating-stars {
+  margin-left: 30px;
+}

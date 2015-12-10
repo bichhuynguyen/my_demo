@@ -1,0 +1,20 @@
+<%= render 'layouts/carousel' %>
+<div class="container">
+  <section>
+    <h2 class="category">Google Books</h2>
+    <% @books.each_slice(4) do |slice_of_four| %>
+      <div class="row">
+        <% slice_of_four.each do |book| %>
+          <div class="col-md-3">
+            <figure>
+              <%= link_to image_tag(book.covers, class: "large-cover"), book_path(book) %>
+              <figcaption class="book-title">
+                <%= link_to book.title, book_path(book) %>
+              </figcaption>
+            </figure>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </section>  
+</div>

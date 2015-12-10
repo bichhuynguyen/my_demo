@@ -1,0 +1,27 @@
+@import "../bases/variables";
+@import "../bases/helpers";
+.book-title {
+  width: 200px;
+  @extend .margin-pos;
+}
+
+.book-title-sidebar {
+  width: 140px;
+  margin-left: 60px;
+}
+
+.book-title-lg {
+  color: $dark-blue;
+  margin: 100px 0 60px 30px;
+}
+
+.content-top-books,
+.content-upload-books,
+.content-lib-books,
+.content-recommend-books {
+  text-align: center;
+}
+
+.recommend-book {
+  margin-top: 25px;
+}
