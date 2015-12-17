@@ -9,7 +9,7 @@
 
 
 user = "huynguyen"
-ip_address = "127.0.0.13"
+ip_address = "172.16.10.38"
 # role-based syntax
 # ==================
 
@@ -62,5 +62,5 @@ set :bundle_flags, "--no-deployment"
 set :ssh_options, {
   keys: %w(~/.ssh/server-vm),
   forward_agent: true,
-  port: 2222
+  # port: 2222
 }
